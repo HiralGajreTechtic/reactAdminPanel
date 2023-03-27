@@ -1,0 +1,9 @@
+.ProfileForm{ 
+    display: 'block' ;
+    width: 700;
+    padding: 30;
+    text-align: left
+}
+.submitBtn{
+    margin-top:1%;
+}
