@@ -5,7 +5,8 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.css';
-import './ProfileForm.css'
+import './ProfileForm.css';
+
 function ProfileForm() {
   return (
     <div className="ProfileForm">
