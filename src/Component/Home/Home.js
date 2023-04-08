@@ -1,6 +1,7 @@
 import ProfileForm from '../Profile/ProfileForm';
 import Nav from 'react-bootstrap/Nav';
 import NavBar from '../NavBar/NavBar'
+import Counter from '../Counter/Counter';
 
 function Home() {
   return (
@@ -29,7 +30,7 @@ function Home() {
     <div className='container'>
     <div className="row">
       <div className="col-md-12">
-      <ProfileForm/>
+      <Counter name="Hiral Gajre"/>
       </div>
       </div>
     </div>
