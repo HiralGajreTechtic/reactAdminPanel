@@ -8,13 +8,13 @@ class Counter extends React.Component  {
       count: 0
     };
   }
-  increment() {
+  increment=()=> {
     this.setState({
       count: this.state.count + 1
     });
   }
 
-  decrement() {
+  decrement=()=> {
     if (this.state.count === 0) {
       this.setState({
         count: 0
@@ -35,10 +35,10 @@ class Counter extends React.Component  {
           <p>Props value: {this.props.name}</p>
         </div>
             <Col>
-              <Button variant="primary" className="submitBtn"  onClick={this.increment.bind(this)}  type="submit">Increment </Button>
+              <Button variant="primary" className="submitBtn"  onClick={this.increment}  type="submit">Increment </Button>
             </Col>
             <Col>
-              <Button variant="primary" className="submitBtn"  onClick={this.decrement.bind(this)} type="submit">Decrement </Button>
+              <Button variant="primary" className="submitBtn"  onClick={this.decrement} type="submit">Decrement </Button>
             </Col>
             <Col>
               <Button variant="primary" className="submitBtn"  onClick={() => this.setState({ count: 0})}  type="submit">Reset </Button>
