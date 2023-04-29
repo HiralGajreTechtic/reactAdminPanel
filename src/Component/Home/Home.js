@@ -2,6 +2,8 @@ import ProfileForm from '../Profile/ProfileForm';
 import Nav from 'react-bootstrap/Nav';
 import NavBar from '../NavBar/NavBar'
 import Counter from '../Counter/Counter';
+import ToDo from '../ToDo/ToDo'
+
 
 function Home() {
   return (
@@ -30,7 +32,9 @@ function Home() {
     <div className='container'>
     <div className="row">
       <div className="col-md-12">
-      <Counter name="Hiral Gajre"/>
+        <ToDo/>
+      {/* <Counter name="Hiral Gajre"/> */}
+
       </div>
       </div>
     </div>
