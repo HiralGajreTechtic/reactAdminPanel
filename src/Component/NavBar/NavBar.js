@@ -3,6 +3,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
+import { Link } from "react-router-dom";
+import {LinkContainer} from 'react-router-bootstrap'
+import Login from '../Login/Login';
+import ProtectedRoute from '../RouteProtection/ProtectedRoute';
+import Home from '../Home/Home';
+import Counter from '../Counter/Counter';
+import ToDo from '../ToDo/ToDo';
+import ProfileForm from '../Profile/ProfileForm';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const NavBar =()=>{
     return <>
@@ -35,6 +44,39 @@ const NavBar =()=>{
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </>
+      <div className="row col-md-12 div12">
+      <div className="col-md-3 div3">
+        <Nav className="col-md-12 d-none d-md-block bg-dark sidebar"
+              
+              >
+          <div className="sidebar-sticky"></div>
+          <Nav.Item>
+            <LinkContainer to="/">
+            <Nav.Link >Home</Nav.Link>
+            </LinkContainer>
+            </Nav.Item>
+            <Nav.Item>
+            <LinkContainer to="/profile">
+            <Nav.Link >Profile</Nav.Link>
+            </LinkContainer>
+            </Nav.Item>
+            <Nav.Item>
+            <LinkContainer to="/login">
+            <Nav.Link >Login</Nav.Link>
+            </LinkContainer>
+            </Nav.Item>
+          </Nav>
+      </div>
+      <div className='col-md-9'>
+      <Routes>
+                <Route path="/" element={ <Home/> } />
+                <Route path="/counterApp" element={<ProtectedRoute> <Counter/> </ProtectedRoute>}  />
+                <Route path="/toDoApp" element={<ProtectedRoute> <ToDo /></ProtectedRoute>} />
+                  <Route path="/profile" element={<ProtectedRoute>  <ProfileForm /> </ProtectedRoute>} />
+                  <Route path="/login" element={<Login />} />
+              </Routes>
+      </div>
+    </div>
+  </>
 }
 export default NavBar;
